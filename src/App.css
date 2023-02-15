@@ -1,0 +1,78 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+}
+
+.container h1 {
+  font-size: 3rem;
+  color: #00ced1;
+  text-shadow: 0 0 10px rgba(0, 206, 209, 0.61);
+}
+
+.form {
+  width: 450px;
+  max-width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.form input {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #000;
+  letter-spacing: 0.25px;
+  box-shadow: 0 0 10px rgba(0, 206, 209, 0.61);
+}
+
+.form button {
+  display: inline-block;
+  padding: 10px 25px;
+  border: none;
+  outline: none;
+  margin-top: 2rem;
+  background-color: rgb(5, 168, 5);
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  box-shadow: 0 0 10px 0 rgb(5, 168, 5);
+}
+
+.form p {
+  margin-top: 1rem;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 0.25px;
+  text-shadow: 0 1px 6px #fff;
+}
+
+.icon-buttons {
+  position: absolute;
+  top: 109px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.icon-buttons i {
+  font-size: 20px;
+  color: #000;
+  cursor: pointer;
+  user-select: none;
+}
+
+.icon-buttons i:nth-child(1) {
+  font-size: 15px;
+}
