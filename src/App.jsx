@@ -29,7 +29,7 @@ export default function App() {
     function generatePassword() {
       const alphabet = "ABCDEFJHIJKLMNOPQRSTUVWXYZabcdefghijklmnoqprstuvwxyz"
       const numbers = "0123456789"
-      const simbols = "!@#$%&*()[]{}_-+=;"
+      const simbols = "!@#$%&*()[]{}_-+=;:/<>|"
       const characters = alphabet + numbers + simbols
       const maxCharacters = 16
       let newPassword = ""
