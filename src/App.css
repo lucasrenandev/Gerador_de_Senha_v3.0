@@ -1,16 +1,16 @@
 .container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  position: relative;
 }
 
 .container h1 {
   font-size: 3rem;
   color: #00ced1;
-  text-shadow: 0 0 10px rgba(0, 206, 209, 0.61);
+  text-shadow: 0 0 10px #00ced19c;
 }
 
 .form {
@@ -30,22 +30,24 @@
   font-weight: 400;
   color: #000;
   letter-spacing: 0.25px;
-  box-shadow: 0 0 10px rgba(0, 206, 209, 0.61);
+  box-shadow: 0 0 10px #00ced19c;
 }
 
 .form button {
   display: inline-block;
-  padding: 10px 25px;
+  padding: 8px 20px;
   border: none;
   outline: none;
   margin-top: 2rem;
-  background-color: rgb(5, 168, 5);
+  background-color: #05a805;
   color: #fff;
   border-radius: 10px;
   cursor: pointer;
   font-size: 15px;
   font-weight: 500;
-  box-shadow: 0 0 10px 0 rgb(5, 168, 5);
+  text-transform: uppercase;
+  letter-spacing: 0.25px;
+  box-shadow: 0 0 10px #05a805;
 }
 
 .form p {

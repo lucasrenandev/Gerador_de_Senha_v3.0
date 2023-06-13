@@ -1,6 +1,4 @@
-import {FaCopy} from 'react-icons/fa'
-import { FaEyeSlash } from 'react-icons/fa';
-import {FaEye} from 'react-icons/fa'
+import { FaCopy, FaEye, FaEyeSlash } from 'react-icons/fa'
 import { useState } from 'react'
 import './App.css'
 
@@ -8,21 +6,21 @@ export default function App() {
     const [inputValue, setInputValue] = useState("")
     const [text, setText] = useState("")
     const [inputType, setInputType] = useState("text")
-    const [icon, setIcon] = useState(FaEyeSlash)
+    const [icon, setIcon] = useState(<FaEyeSlash/>)
 
     function copyPassword() {
       navigator.clipboard.writeText(inputValue)
       window.alert("Senha copiada com sucesso!")
     }
 
-    function toggleTypePassword() {
+    function togglePasswordVisibility() {
       if(inputType === "text") {
         setInputType("password")
-        setIcon(FaEye)
+        setIcon(<FaEye/>)
       }
       else{
         setInputType("text") 
-        setIcon(FaEyeSlash)
+        setIcon(<FaEyeSlash/>)
       }
     }
 
@@ -32,13 +30,13 @@ export default function App() {
       const simbols = "!@#$%&*()[]{}_-+=;:/<>|"
       const characters = alphabet + numbers + simbols
       const maxCharacters = 16
-      let newPassword = ""
+      let password = ""
 
-      for(let i=0; i < maxCharacters; i++) {
+      for(let i = 0; i < maxCharacters; i++) {
         const randomPassword = Math.floor(Math.random() * characters.length)
-        newPassword += characters.charAt(randomPassword, randomPassword + 1)
+        password += characters.charAt(randomPassword, randomPassword + 1)
 
-        setInputValue(newPassword)
+        setInputValue(password)
         setText(`A sua senha possui ${maxCharacters} caracteres!`)
       }
     }
@@ -50,7 +48,7 @@ export default function App() {
         {Object.keys(inputValue).length > 0 && (
           <div className='icon-buttons'>
             <i onClick={copyPassword} title="Copiar"><FaCopy/></i>
-            <i onClick={toggleTypePassword} title="Alternar">{icon}</i>
+            <i onClick={togglePasswordVisibility} title="Alternar">{icon}</i>
           </div>//End icon buttons
         )}
       
